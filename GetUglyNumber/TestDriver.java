@@ -1,12 +1,11 @@
-package RotateArray;
+package GetUglyNumber;
 
 public class TestDriver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MySolution test = new MySolution();
-		int[] testarray = {3,4,5,1,2};
-		int sol = test.minNumberInRotateArray(testarray);
+		int sol = test.GetUglyNumber_Solution(33);
 		System.out.println(sol);
 	}
 

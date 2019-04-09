@@ -1,5 +1,4 @@
 package RotateArray;
-import java.util.ArrayList;
 public class MySolution {
 	public int minNumberInRotateArray(int [] array) {
 		if(array.length==0) {
@@ -9,8 +8,12 @@ public class MySolution {
 			return array[0];
 		}
 		for(int i=0; i<array.length; i++) {
-			if(array[i+1]<=array[i])	return array[i];
+			if(array[i+1]<array[i]) {
+				return array[i+1];
+			}
+			
 		}
+		return array[array.length-1];
 		
 	}
 }
