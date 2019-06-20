@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - SortAlgorithms",
+      "request": "launch",
+      "mainClass": "SortAlgorithms"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - SortAlgorithm",
+      "request": "launch",
+      "mainClass": "SortAlgorithm"
+    }
+  ]
+}
