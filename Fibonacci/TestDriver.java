@@ -6,7 +6,7 @@ public class TestDriver {
         // TODO Auto-generated method stub
         MySolution test = new MySolution();
         int sol = test.Fibonacci(10);
-        System.out.println(sol);
+        System.out.println("中文注释");
     }
 
 }
