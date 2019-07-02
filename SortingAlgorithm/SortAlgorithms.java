@@ -24,14 +24,14 @@ public class SortAlgorithms{
         System.out.println("Before: " + Arrays.toString(array));
         // SortAlgorithms.insertionSort1(array);
         // SortAlgorithms.insertionSort2(array);
-      //  SortAlgorithms.shellSort(array);
-      //  SortAlgorithms.selectionSort(array);
-//        SortAlgorithms.heapSort(array);
-       SortAlgorithms.bubbleSort(array);
-//        SortAlgorithms.quickSort(array, 0, array.length-1);
-//        SortAlgorithms.quickSortByStack(array);
-//        array = SortAlgorithms.mergingSort(array);
-//        SortAlgorithms.radixSort(array);
+        // SortAlgorithms.shellSort(array);
+        // SortAlgorithms.selectionSort(array);
+        // SortAlgorithms.heapSort(array);
+        // SortAlgorithms.bubbleSort(array);
+        // SortAlgorithms.quickSort(array, 0, array.length-1);
+        // SortAlgorithms.quickSortByStack(array);
+        // array = SortAlgorithms.mergingSort(array);
+        SortAlgorithms.radixSort(array);
         System.out.println("After:  " + Arrays.toString(array));
     }
 
