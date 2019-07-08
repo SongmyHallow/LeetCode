@@ -3,27 +3,46 @@ package InversePairs;
 import java.util.Arrays;
 
 public class solution{
-  int counter = 0;
-  public int InversePairs(int[] array){
-    if(array.length<=1 || array==null)  return 0;
-   
-    int middle = array.length >> 1;
-    int[] leftArr = Arrays.copyOfRange(array, 0, middle);
-    int[] rightArr = Arrays.copyOfRange(array, middle, array.length);
+    public int InversePairs(int[] array){
+        if(array == null || array.length == 0)  return 0;
 
-  }
+        int[] copy = new int[array.length];
+        for(int i=0; i<array.length; i++){
+            copy[i] = array[i];
+        }
+        int count = merge(array,copy,0,array.length-1);
+        return count;
 
-  private int[] merge(int[] arr1, int[] arr2){
-    int i=0, j=0, k=0;
-    int[] result = new int[arr1.length + arr2.length];
-    while(i < arr1.length && j < arr2.length){
-      if(arr1[i] <= arr2[j]){
-        result[k++] = arr1[i++];
-      }else{
-        result[k++] = arr2[j++];
-      }
     }
+    private int merge(int[] arr, int[] copy, int low, int high){
+        if(low==high)   return 0;
 
-    return result;
-  }
+        int mid = (low+high) >> 1;
+        int leftCount = merge(arr, copy, low, mid)%1000000007;
+        int rightCount = merge(arr, copy, mid+1, high)%1000000007;
+
+        int count = 0;
+        int i = mid, j = high;
+        int locCopy = high;
+        while(i>=low && j>mid){
+            if(arr[i] > arr[j]){
+                count += j - mid;
+                copy[locCopy--] = arr[i--];
+                if(count >= 1000000007) count %= 1000000007; 
+            }
+            else{
+                copy[locCopy--] = arr[j--];
+            }
+        }
+        for(;i>=low;i--){
+            copy[locCopy--] = arr[i];
+        }
+        for(;j>mid;j--){
+            copy[locCopy--] = arr[j];
+        }
+        for(int s=low; s<=high; s++){
+            arr[s] = copy[s];
+        }
+        return (leftCount+rightCount+count)%1000000007;
+    }
 }
