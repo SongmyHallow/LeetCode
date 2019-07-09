@@ -1,6 +1,6 @@
 import java.util.ArrayDeque;
 
-public class BinaryTree{
+public class solution{
   static class TreeNode{
     int value;
     TreeNode right;
@@ -12,7 +12,7 @@ public class BinaryTree{
   }
   TreeNode root;
   // 构造方法
-  public BinaryTree(int[] arr){
+  public solution(int[] arr){
     root = makeBinaryTreeByArray(arr,1);
   }
   

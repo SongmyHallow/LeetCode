@@ -4,6 +4,12 @@
       "type": "java",
       "name": "CodeLens (Launch) - TestDriver",
       "request": "launch",
+      "mainClass": "BinaryTree.TestDriver"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestDriver",
+      "request": "launch",
       "mainClass": "TestDriver"
     }
   ]
