@@ -1,15 +1,6 @@
 import java.util.ArrayDeque;
 
 public class solution{
-  static class TreeNode{
-    int value;
-    TreeNode right;
-    TreeNode left;
-
-    public TreeNode(int value){
-      this.value = value;
-    }
-  }
   TreeNode root;
   // 构造方法
   public solution(int[] arr){
@@ -20,9 +11,9 @@ public class solution{
   // 剔除值为0的元素
   public static TreeNode makeBinaryTreeByArray(int[] arr, int index){
     if(index < arr.length){
-      int value = arr[index];
-      if(value!=0){
-        TreeNode t = new TreeNode(value);
+      int val = arr[index];
+      if(val!=0){
+        TreeNode t = new TreeNode(val);
         arr[index] = 0;
         t.left = makeBinaryTreeByArray(arr, index*2);
         t.right = makeBinaryTreeByArray(arr, index*2+1);
@@ -42,7 +33,7 @@ public class solution{
     stack.push(root);
     while(stack.isEmpty() == false){
       TreeNode node = stack.pop();
-      System.out.println(node.value + " ");
+      System.out.println(node.val + " ");
       if(node.right!=null){
         stack.push(node.right);
       }
@@ -63,7 +54,7 @@ public class solution{
     queue.add(root);
     while(queue.isEmpty() == false){
       TreeNode node = queue.remove();
-      System.out.println(node.value + " ");
+      System.out.println(node.val + " ");
       if(node.right!=null){
         queue.add(node.right);
       }
