@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SolutionTwo",
+            "request": "launch",
+            "mainClass": "SolutionTwo",
+            "projectName": "fourSum_58f0b24c"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution",
             "request": "launch",
             "mainClass": "Solution"
