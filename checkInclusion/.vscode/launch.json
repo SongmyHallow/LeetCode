@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Solution_hashmap",
+            "request": "launch",
+            "mainClass": "Solution_hashmap"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution_brute",
+            "request": "launch",
+            "mainClass": "Solution_brute"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution",
             "request": "launch",
             "mainClass": "Solution"
